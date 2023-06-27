@@ -1,13 +1,11 @@
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import { Component } from 'react';
-// import axios from 'axios';
+import PropTypes from 'prop-types';
 import { Button } from 'components/Button/Button';
 import { getGallery } from 'service/api';
 import { Loader } from 'components/Loader/Loader';
-import { Modal } from 'components/Modal/Modal';
 
-// axios.defaults.baseURL = '';
 export class App extends Component {
   state = {
     value: '', //search
@@ -51,17 +49,6 @@ export class App extends Component {
       page: this.state.page + 1,
     });
   };
-
-  // toggleModal = () => {
-  //   this.setState(prevState => ({
-  //     isOpen: !prevState.isOpen,
-  //   }));
-  // };
-
-  // openModal = photo => {
-  //   this.setState({ photo: photo });
-  //   // this.toggleModal();
-  // };
 
   fetchData = async () => {
     this.setState({

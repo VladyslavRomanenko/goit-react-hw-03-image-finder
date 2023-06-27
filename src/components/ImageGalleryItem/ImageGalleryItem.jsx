@@ -19,7 +19,7 @@ export class ImageGalleryItem extends Component {
           <img
             className={css.galleryItemImage}
             src={photo.webformatURL}
-            alt="photo"
+            alt="card"
           />
         </li>
         {isOpen ? (

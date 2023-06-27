@@ -8,7 +8,7 @@ export class ImageGallery extends Component {
     if (!photos.length) {
       return (
         <>
-          <img className={css.image} src={img} alt="NO IMAGE" />
+          <img className={css.image} src={img} alt="none" />
         </>
       );
     }
