@@ -1,7 +1,6 @@
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Button } from 'components/Button/Button';
 import { getGallery } from 'service/api';
 import { Loader } from 'components/Loader/Loader';
