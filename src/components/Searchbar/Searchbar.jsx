@@ -1,19 +1,28 @@
 import css from './Searchbar.module.css';
-export const Searchbar = ({ onSubmit }) => {
-  return (
-    <header className={css.Searchbar}>
-      <form className={css.SearchForm} onSubmit={onSubmit}>
-        <button type="submit" className={css.SearchFormBtn}>
-          <span className={css.SearchFormButtonLabel}>GO</span>
-        </button>
-        <input
-          className={css.SearchFormInput}
-          type="text"
-          autocomplete="off"
-          autofocus
-          placeholder="Search images and photos"
-        />
-      </form>
-    </header>
-  );
-};
+import iconSearch from '../../images/icons.svg';
+import { Component } from 'react';
+export class Searchbar extends Component {
+  render() {
+    const { value, onChangeValue, onSubmitValue } = this.props;
+    return (
+      <header className={css.Searchbar}>
+        <form className={css.SearchForm} onSubmit={onSubmitValue}>
+          <button type="submit" className={css.SearchFormBtn}>
+            <svg className={css.icon} width="20" height="20">
+              <use xlinkHref={`${iconSearch}#icon-search`}></use>
+            </svg>
+          </button>
+          <input
+            onChange={onChangeValue}
+            value={value}
+            className={css.SearchFormInput}
+            type="text"
+            autoComplete="off"
+            autoFocus
+            placeholder="Search images and photos"
+          />
+        </form>
+      </header>
+    );
+  }
+}
