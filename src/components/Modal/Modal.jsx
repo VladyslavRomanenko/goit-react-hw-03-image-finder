@@ -28,7 +28,7 @@ export class Modal extends Component {
     return (
       <div className={css.overlay} onClick={this.handleBackdropClick}>
         <div className={css.modal}>
-          <img src={img} alt="card" />
+          <img className={css.modalImage} src={img} alt="card" />
         </div>
       </div>
     );
