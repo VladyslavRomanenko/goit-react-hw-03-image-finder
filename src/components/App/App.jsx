@@ -11,7 +11,7 @@ export class App extends Component {
     photos: [],
     page: 1,
     loading: false,
-    showBtn: true,
+    showBtn: false,
   };
 
   componentDidMount() {
