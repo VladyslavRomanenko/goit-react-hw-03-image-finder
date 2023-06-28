@@ -7,7 +7,7 @@
 .galleryItemImage {
   width: 320px;
   height: 220px;
-  cursor: pointer;
+  cursor: zoom-in;
   transition: transform 200ms linear, box-shadow 200ms linear;
 }
 

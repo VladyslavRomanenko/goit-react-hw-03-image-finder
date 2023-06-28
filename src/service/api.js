@@ -19,7 +19,7 @@ export const getGallery = async (value, page) => {
         per_page: 12,
       },
     });
-    return response.data.hits;
+    return response.data;
   } catch (error) {
     throw error;
   }
