@@ -43,7 +43,6 @@ export class App extends Component {
   };
 
   handleLoadMore = e => {
-    e.preventDefault();
     this.setState({
       page: this.state.page + 1,
     });
@@ -57,11 +56,12 @@ export class App extends Component {
     try {
       const data = await getGallery(this.state.value, this.state.page);
       this.setState({ photos: [...this.state.photos, ...data] });
+    } catch (error) {
+      console.error('Error fetching data', error);
+    } finally {
       this.setState({
         loading: false,
       });
-    } catch (error) {
-      console.error('Error fetching data', error);
     }
   };
 

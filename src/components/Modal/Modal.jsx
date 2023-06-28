@@ -3,12 +3,10 @@ import css from './Modal.module.css';
 export class Modal extends Component {
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeydown);
-    document.addEventListener('click', this.handleBackdropClick);
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeydown);
-    // document.removeEventListener('click', this.handleBackdropClick);
   }
 
   handleKeydown = e => {

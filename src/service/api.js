@@ -7,6 +7,7 @@ const searchGalleryApi = axios.create({
 const KEY = '36218076-8e9a49d554f80cd792785c055';
 
 export const getGallery = async (value, page) => {
+  value = value || 'dog';
   try {
     const response = await searchGalleryApi.get('', {
       params: {
